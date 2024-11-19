@@ -1,0 +1,16 @@
+{
+  "customSyntax": "postcss-html",
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order",
+    "stylelint-config-sass-guidelines",
+    "@lfiot/stylelint-config"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-config-rational-order/plugin"
+  ],
+  "rules": {
+    "selector-pseudo-element-no-unknown": null
+  }
+}
