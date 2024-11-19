@@ -1,0 +1,36 @@
+$--common-font-size: 14px;
+// 基础颜色定义
+$--color-primary: #2F61A7; // 主色
+$--color-green: #7DD75A; // 主色
+$--color-tomato: #DC5564;
+$--color-blue: #446cc0;
+$--color-main-grey: #F3F3F4;
+$--color-grey-base: #dcdfe6;
+$--color-grey1: #323232;
+$--color-grey2: #5b5b5b;
+
+
+
+$--color-grey9: #d6d6d6;
+
+$--color-white: #ffffff;
+
+
+
+$--side-bar-width: 180px;
+$--side-bar-collapse-width: 64px;
+$--img-logo-height: 18px;
+$--header-height: 48px;
+$--nav-bar-height: 46px;
+$--btn-hover-height: 36px;
+
+
+:export {
+  sidebarWidth: $--side-bar-width; // 导航条宽度
+  sidebarCollapseWidth: $--side-bar-collapse-width; // 导航条折叠起来时宽度
+  imgLogoHeight: $--img-logo-height; // logo高度
+  headerHeight: $--header-height; // 顶部导航高度
+  navbarHeight: $--nav-bar-height; // 左侧导航item高度
+
+  navTextColor: $--color-white; // 导航中文字颜色
+}

@@ -1,0 +1,30 @@
+.el-form {
+  .el-form-item {
+    margin-bottom: 12px !important;
+    border-radius: 1px;
+
+    .el-input__inner {
+      border-radius: 1px;
+    }
+
+    .el-input,
+    .el-input-number,
+    .el-date-editor,
+    .el-cascader,
+    .el-select{
+      width: 100%;
+
+      &.is-disabled {
+        .el-input__inner {
+          color: $--color-grey1 !important;
+        }
+      }
+    }
+  }
+
+  &.normal {
+    .el-form-item {
+      margin-bottom: 18px !important;
+    }
+  }
+}

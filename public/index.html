@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- 使用CDN的CSS文件 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn &&
+    htmlWebpackPlugin.options.cdn.css) { %>
+    <link
+        href="<%= htmlWebpackPlugin.options.cdn.css[i] %>"
+        rel="stylesheet"
+    />
+    <% } %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>
+        We're sorry but
+        <%= htmlWebpackPlugin.options.title %>
+        doesn't work properly without JavaScript enabled. Please enable it to continue.
+      </strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <!-- 用户满意度 -->
+    <script src="https://s.longfor.com/public/js/star/starpc-2.0-1.2.11.js"></script>
+    <script>
+      const userId = localStorage.getItem('_user_id') || ''
+      const { hostname } = window.location
+      const isProd = hostname === 'xxx正式环境域名'
+      try {
+        if (window.MAIAAPM && window.MAIAAPM.init) {
+          window.MAIAAPM.init({
+            key: isProd ? '正式环境的key' : '测试环境的key',
+            debug: false,
+            cors_domains: []
+          })
+        }
+      } catch (e) {
+        console.error('APM：', e)
+      }
+
+      try {
+        let obj = {
+          appKey: isProd ? '' : 'db8472b8964f4d91b71f9e39117ad12c', // 刚创建的应用的appkey,
+          oaAccount: userId, // b端产品传入
+          bottom: 20,
+          color: 'blue',
+          debug: !isProd
+        }
+        window.MaiaAppraisal.appraisal(obj)
+      } catch (e) {
+        console.error('用户满意度：', e)
+      }
+    </script>
+
+    <!-- 使用CDN的JS文件 -->
+    <% for (var i in htmlWebpackPlugin.options.cdn &&
+    htmlWebpackPlugin.options.cdn.js) { %>
+    <script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+    <% } %>
+  </body>
+</html>

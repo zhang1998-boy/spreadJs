@@ -1,0 +1,17 @@
+.el-dialog {
+  z-index: 9999 !important;
+}
+
+.el-dialog__header {
+  padding-top: 10px !important;
+  border-bottom: 1px solid $--color-grey-base;
+
+  .el-dialog__headerbtn {
+    top: 15px;
+  }
+}
+
+.el-dialog__footer {
+  padding-bottom: 10px !important;
+  border-top: 1px solid $--color-grey-base;
+}

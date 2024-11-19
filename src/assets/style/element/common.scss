@@ -1,0 +1,6 @@
+// 强制提示窗浮层最高
+.el-notification,
+.el-message,
+.el-date-picker {
+  z-index: 9999 !important;
+}

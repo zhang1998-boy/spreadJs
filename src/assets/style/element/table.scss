@@ -1,0 +1,15 @@
+// 在使用element-ui时，常用的el-table组件的固定列显示不正常：
+// 1.固定列最后一行显示不正常，最后一行横向只显示一部分。
+.el-table__fixed {
+  height: 100% !important;
+}
+
+.el-table__fixed-right {
+  height: 100% !important;
+}
+
+// 分页
+.el-pagination{
+  margin-top: 12px;
+  text-align: right;
+}
